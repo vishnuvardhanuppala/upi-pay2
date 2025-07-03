@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pay ₹300 – Secure UPI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card {
+      text-align: center;
+      padding: 50px 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 90%;
+      width: 420px;
+      animation: fadeIn 2s ease-out;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 2.5em;
+      background: linear-gradient(90deg, #00eaff, #4af6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .pay-btn {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: bold;
+      background: linear-gradient(270deg, #12c2e9, #c471ed, #f64f59);
+      background-size: 400% 400%;
+      animation: gradientFlow 6s ease infinite, pulseGlow 2s infinite;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 10px #f64f59, 0 0 20px #c471ed;
+      }
+      50% {
+        box-shadow: 0 0 25px #12c2e9, 0 0 35px #f64f59;
+      }
+    }
+
+    .pay-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 40px #ffffff55;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 16px;
+      color: #c5f5ff;
+      opacity: 0.85;
+      text-shadow: 0 0 10px rgba(0,255,255,0.1);
+    }
+
+    .glowline {
+      width: 100%;
+      height: 3px;
+      margin: 30px auto 0;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0ff, #00f, #0ff);
+      background-size: 200% 200%;
+      animation: moveLine 3s linear infinite;
+    }
+
+    @keyframes moveLine {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+
+    @media (max-width: 600px) {
+      h2 { font-size: 1.8em; }
+      .pay-btn { font-size: 18px; padding: 14px 30px; }
+      .note { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Pay ₹300 Securely</h2>
+    <a class="pay-btn" href="upi://pay?pa=9908380546@ybl&pn=VEC&am=300&cu=INR">
+      💸 Click to Pay Now
+    </a>
+    <p class="note">Opens your UPI app like PhonePe, GPay, Paytm, etc.</p>
+    <div class="glowline"></div>
+  </div>
+
+</body>
+</html>
