@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pay ₹300 – Secure UPI</title>
   <style>
     * {
@@ -19,20 +20,20 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      padding: 20px;
     }
 
     .card {
       text-align: center;
-      padding: 50px 30px;
+      padding: 40px 20px;
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      max-width: 90%;
-      width: 420px;
+      max-width: 400px;
+      width: 100%;
       animation: fadeIn 2s ease-out;
-      position: relative;
     }
 
     @keyframes fadeIn {
@@ -41,20 +42,20 @@
     }
 
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
       background: linear-gradient(90deg, #00eaff, #4af6ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 25px;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     .pay-btn {
       display: inline-block;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       color: #fff;
-      padding: 16px 40px;
+      padding: 14px 28px;
       border-radius: 50px;
       font-weight: bold;
       background: linear-gradient(270deg, #12c2e9, #c471ed, #f64f59);
@@ -80,22 +81,22 @@
     }
 
     .pay-btn:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 40px #ffffff55;
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ffffff55;
     }
 
     .note {
-      margin-top: 25px;
-      font-size: 16px;
+      margin-top: 20px;
+      font-size: 15px;
       color: #c5f5ff;
       opacity: 0.85;
-      text-shadow: 0 0 10px rgba(0,255,255,0.1);
+      text-shadow: 0 0 8px rgba(0,255,255,0.1);
     }
 
     .glowline {
       width: 100%;
       height: 3px;
-      margin: 30px auto 0;
+      margin: 25px auto 0;
       border-radius: 10px;
       background: linear-gradient(90deg, #0ff, #00f, #0ff);
       background-size: 200% 200%;
@@ -105,12 +106,6 @@
     @keyframes moveLine {
       0% { background-position: 0% 0%; }
       100% { background-position: 200% 0%; }
-    }
-
-    @media (max-width: 600px) {
-      h2 { font-size: 1.8em; }
-      .pay-btn { font-size: 18px; padding: 14px 30px; }
-      .note { font-size: 14px; }
     }
   </style>
 </head>
